@@ -1,5 +1,5 @@
 # Autor: Ricardo Medeiros da Costa Junior
-# Titulo: Exercicio
+# Titulo: Exercicio 1
 # Data: 22/03/2016
 # Objetivo: Dados dois numeros naturais verificar quem e o maior
 # Entrada: numero1, numero2 (inteiros)
