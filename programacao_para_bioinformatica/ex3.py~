@@ -1,10 +1,10 @@
 # Autor: Ricardo Medeiros da Costa Junior
 # Titulo: Exercicio 2
 # Data: 22/03/2016
-# Objetivo: Dados 4 notas, calcular a media aritmetica
-# Entrada: nota1, nota2, nota3, nota4 (numeros reais)
-# Saida: A media aritmetica
-# Obs.: Verificar se os quatro numeros sao numeros reais e depois mostrar a media aritmetica deles
+# Objetivo: Dados 4 notas, calcular a media aritimetica
+# Entrada: numero1, numero2, numero3, numero4 (numeros reais)
+# Saida: A media
+# Obs.: Verificar se os quatro numeros sao numeros reais e depois mostrar a media aritimetica deles
 
 def obter_entrada(qtd_notas):
     notas = []
@@ -23,7 +23,7 @@ def calcular(notas):
 
 def main():
     try:
-        print("A media aritmetica e:", calcular(obter_entrada(qtd_notas=4)))
+        print("A media e:", calcular(obter_entrada(qtd_notas=4)))
         
     except ValueError:
         print("Numero invalido. Programa sera reiniciado. POR FAVOR! \n"
