@@ -1,4 +1,7 @@
 def smith_waterman(sequence1, sequence2):
+    MATCH = 2
+    MISMATCH = 1
+    GAP = 2
     #    Inicializando a matriz
     n = len(sequence1)
     m = len(sequence2)
@@ -9,15 +12,15 @@ def smith_waterman(sequence1, sequence2):
         for j in range(1, m):
 
             if (sequence1[i-1] == sequence2[j-1]):
-                x = matriz[i-1][j-1] + 2
+                x = matriz[i-1][j-1] + MATCH
             else:
-                x = matriz[i-1][j-1] - 1
+                x = matriz[i-1][j-1] - MISMATCH
 
-            if (x < (matriz[i-1][j] - 2)):
-                x = (matriz[i-1][j] - 2)
+            if (x < (matriz[i-1][j] - GAP)):
+                x = (matriz[i-1][j] - GAP)
 
-            if (x < (matriz[i][j-1] - 2)):
-                x =  (matriz[i][j-1] - 2)
+            if (x < (matriz[i][j-1] - GAP)):
+                x =  (matriz[i][j-1] - GAP)
 
             if (x < 0):
                 x = 0
