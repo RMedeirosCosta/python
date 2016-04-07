@@ -1,4 +1,0 @@
-def smith_waterman(sequence1, sequence2):
-    // Inicializando a matriz
-    matriz[[0 for x in range(len(sequence1))] for x in range(len(sequence2))]
-    
