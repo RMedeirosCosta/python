@@ -3,12 +3,11 @@ def smith_waterman(sequence1, sequence2):
     n = len(sequence1)
     m = len(sequence2)
     matriz = [[0 for x in range(m)] for x in range(n)]
-    print(matriz)
 
     x = 0
     for i in range(1, n):
         for j in range(1, m):
-            print(matriz[i-1][j])
+
             if (sequence1[i-1] == sequence2[j-1]):
                 x = matriz[i-1][j-1] + 2
             else:
