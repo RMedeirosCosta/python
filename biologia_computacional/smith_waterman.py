@@ -40,8 +40,8 @@ def smith_waterman(sequence1, sequence2):
             
 
 def main():
-    SEQUENCE_1 = "AGTTGAAA"
-    SEQUENCE_2 = "GGGTTATGGA"
+    SEQUENCE_1 = "ACTCGTTAGAA"
+    SEQUENCE_2 = "GAACTTATTT"
 
     print(SEQUENCE_1, SEQUENCE_2, str(smith_waterman(SEQUENCE_1, SEQUENCE_2)))
 

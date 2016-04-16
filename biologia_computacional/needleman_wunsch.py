@@ -15,7 +15,7 @@ def needleman_wunsch(sequence1, sequence2):
     for j in range(1, m):
         matriz[0][j] = j * GAP
 
-    x = 0;
+    x = 0
     for i in range(1, n):
         for j in range(1, m):
 
