@@ -1,5 +1,13 @@
 import re
 
+def imprimir(sequencia1, sequencia2, leitura):
+    try:
+        sequencia = sequencia1[(leitura-1):]
+        
+        print("Leitura", leitura, sequencia,"Quantidade encontrado:", sequencia.count(sequencia2), "\nPosições: ", [(s+1) for s in [x.start() for x in re.finditer(sequencia2, sequencia)]])
+    except:
+        print("Leitura", leitura, sequencia,"Quantidade encontrado:", sequencia.count(sequencia2), "\nPosições: Não há ocorrência")
+        
 def obter_antisense(sequencia):
     return sequencia.replace("A", "X").replace("T","A").replace("X","T").replace("G","X").replace("C","G").replace("X","C")
 
@@ -17,10 +25,11 @@ def main():
         if (validador.match(sequencia2) is None):
             raise ValueError
 
-        print("Frame 1:", sequencia)
-        print("Frame 2:", sequencia[1:])
-        print("Frame 3:", sequencia[2:])
-        print("Antisense:", obter_antisense(sequencia))
+        antisense = obter_antisense(sequencia)
+        for i in range(1,4):
+            imprimir(sequencia, sequencia2, i)
+        for i in range(1,4):
+            imprimir(antisense, sequencia2, i)
 
     except ValueError:
          print("Você digitou uma sequência inválida. As sequências devem ter apenas caracteres ATGC sendo que a segunda deve ser apenas ATGC e ter apenas 3 bases.\n")
