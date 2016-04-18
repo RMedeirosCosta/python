@@ -1,19 +1,7 @@
 import re
 
 def obter_antisense(sequencia):
-    antisense = ""
-
-    for indice in sequencia:
-        if (indice == "A"):
-            antisense += "T"
-        elif (indice == "G"):
-            antisense += "C"
-        elif (indice == "T"):
-            antisense += "A"
-        else:
-            antisense += "G"
-
-    return antisense
+    return sequencia.replace("A", "X").replace("T","A").replace("X","T").replace("G","X").replace("C","G").replace("X","C")
 
 def main():
     try:         
