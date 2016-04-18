@@ -1,5 +1,20 @@
 import re
 
+def obter_antisense(sequencia):
+    antisense = ""
+
+    for indice in sequencia:
+        if (indice == "A"):
+            antisense += "T"
+        elif (indice == "G"):
+            antisense += "C"
+        elif (indice == "T"):
+            antisense += "A"
+        else:
+            antisense += "G"
+
+    return antisense
+
 def main():
     try:         
         sequencia = input("Digite a sequência: ").upper()
@@ -17,6 +32,7 @@ def main():
         print("Frame 1:", sequencia)
         print("Frame 2:", sequencia[1:])
         print("Frame 3:", sequencia[2:])
+        print("Antisense:", obter_antisense(sequencia))
 
     except ValueError:
          print("Você digitou uma sequência inválida. As sequências devem ter apenas caracteres ATGC sendo que a segunda deve ser apenas ATGC e ter apenas 3 bases.\n")
