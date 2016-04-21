@@ -49,14 +49,7 @@ def main():
              main()
              
 main()
-#s = "ATCGATCGA"
-#print(s)
-#print(dividir(s[len(s)::-1]))
-#print(s[::-1])
-#print(s[len(s)-2::-1])
-#print(s[len(s)-3::-1])
-#print(dividir(s[len(s)-1::-1]))
-#print(dividir(s[len(s)-2::-1]))
+
 
       
       
