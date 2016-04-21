@@ -2,14 +2,13 @@ import re
 
 def imprimir(sequencia1, sequencia2, leitura, antisense=False):
     i = leitura
-
+    sequencia_dividida = dividir(sequencia1[(i-1)::])
+    
     if antisense:
-        sequencia_dividida_invertida = dividir(sequencia1[(len(sequencia1)-i)::-1])
-        sequencia_dividida = dividir(sequencia1[(i-1)::])
+        sequencia2 = sequencia2[::-1]
         leitura *= -1
-        print("Leitura", leitura, sequencia_dividida,"Quantidade(s) encontrada(s):", sequencia_dividida_invertida.count(sequencia2), "\nPosições:",  [(idx*3+1) for idx, x in enumerate(sequencia_dividida) if (x == sequencia2[::-1])])
+        print("Leitura", leitura, sequencia_dividida,"Quantidade(s) encontrada(s):", sequencia_dividida.count(sequencia2), "\nPosições:",  [(idx*3+1) for idx, x in enumerate(sequencia_dividida) if (x == sequencia2)])
     else:
-        sequencia_dividida = dividir(sequencia1[(i-1)::])
         print("Leitura", leitura, sequencia_dividida,"Quantidade(s) encontrada(s):", sequencia_dividida.count(sequencia2), "\nPosições:",  [(idx*3+1) for idx, x in enumerate(sequencia_dividida) if (x == sequencia2)])
         
 def obter_antisense(sequencia):
