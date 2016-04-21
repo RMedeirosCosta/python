@@ -10,7 +10,7 @@ def imprimir(sequencia1, sequencia2, leitura, antisense=False):
         print("Leitura", leitura, sequencia,"Quantidade(s) encontrada(s):", sequencia.count(sequencia2), "\nPosições: Não há ocorrência")
         
 def obter_antisense(sequencia):
-    return sequencia.replace("A", "X").replace("T","A").replace("X","T").replace("G","X").replace("C","G").replace("X","C")[::-1]
+    return sequencia.replace("A", "X").replace("T","A").replace("X","T").replace("G","X").replace("C","G").replace("X","C")
 
 def main():
     try:         
