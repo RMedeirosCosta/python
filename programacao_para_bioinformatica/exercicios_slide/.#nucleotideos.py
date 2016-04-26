@@ -1,1 +1,0 @@
-ricardo@gentoo_desktop.28152:1461524130

@@ -12,7 +12,7 @@ def main():
         if (validador.match(sequencia) is None):
             raise ValueError
 
-        print("\n-------RESULTADO------\n
+        print("\n-------RESULTADO------\n")
 
         for nucleotideo in nucleotideos:
             imprimir(sequencia, nucleotideo)
@@ -21,4 +21,3 @@ def main():
          if (input("Desejar tentar novamente? (s/n): ").lower() == "s"):
              main()
 main()
-
