@@ -5,32 +5,22 @@ import numpy as np
 from ggplot import *
 
 def imprimir(sequencia, trinucleotideos):
-    nt = {}
-    dint = {}
-    trint = {}
-    
+    a = []
+
     for i in trinucleotideos[0]:
-        nt[i] = [sequencia.count(i)]
+        a.append(sequencia.count(i))
         
         for j in trinucleotideos[1]:
-            dint[i+j] = [sequencia.count(i+j)]
-            
+            a.append(sequencia.count(i+j))
+                      
             for k in trinucleotideos[2]:
-                trint[i+j+k] = [sequencia.count(i+j+k)]
+                a.append(sequencia.count(i+j+k))
 
-    d = {}
-    d.update(nt)
-#    d.update(dint)
-#    d.update(trint)
-#    print(d)
-
-    df = pd.DataFrame.from_dict(d)
-    df = pd.melt(df)
-    print(df)
-
-    print(ggplot(aes(x='bn'), data=df) + geom_histogram())
-    #print(ggplot(df, aes(x='pageviews')) + geom_histogram(binwidth=50))    
-    #print(ggplot(aes(x='pageviews'), data=pageviews) + geom_histogram())
+    df = pd.DataFrame(data=a, columns=['a'])
+        
+    p = ggplot(aes(x='x'), data=df)
+    p + geom_histogram(binwidth=1)
+    print(p)
 
 def main(): 
     try:
